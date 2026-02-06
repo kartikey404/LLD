@@ -19,7 +19,10 @@ if __name__=="__main__":
         if name == "":
             break
         counter += 1
-        game.add_palyer(Player(name, counter))
+        game.add_player(Player(name, counter))
 
-    game.play()
-    print("game finish! thankyou for paying")
+    if counter < 2:
+        print("Add at least two players to start the game.")
+    else:
+        game.play()
+        print("Game finished. Thank you for playing.")
